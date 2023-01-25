@@ -553,6 +553,7 @@ h1{
         width: 100%;
         align-items: center !important;    
         justify-content: center;  
+        overflow: hidden;
     }
 
    
