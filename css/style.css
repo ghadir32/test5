@@ -109,45 +109,7 @@ nav.sticky{
 
 /* end of header and navbar styling */
 
-  /* media for images overlapping */
-  @media only screen and (max-width: 891px) {
-    
-    .container1{
-        flex-direction: column;
-        width: 95% !important;
-        padding-top: 2%;
-     }
-     .left1{
-        width: 100%;
-        margin: 0;
-        max-height: 400px !important;
-     }
-     .right1{
-        width: 97% !important;
-        margin: 0;
-        margin-top: -100px !important;
-        margin-left: 0px !important;
-        padding: 30px !important;
-     }
 
-     .left2{
-        width: 97% !important;
-        padding: 20px !important;
-      }
-
-     .left2 p {
-        padding: 20 30px 0 0 !important;
-    }
-    .right2{
-        /* width: 85% !important; */
-        display: none;
-    }
-
-    .getInTouch {
-        margin: 5% 0 5% 0;
-    }
-
-   }
 
 
 
@@ -752,3 +714,43 @@ a{
     border-color: #808080;
     border-width: 1px;
 } */
+
+  /* media for images overlapping */
+  @media only screen and (max-width: 891px) {
+    
+    .container1{
+        flex-direction: column;
+        width: 95% !important;
+        padding-top: 2%;
+     }
+     .left1{
+        width: 80%;
+        margin: 0;
+        max-height: 400px !important;
+     }
+     .right1{
+        width: 97% !important;
+        margin: 0;
+        margin-top: -100px !important;
+        margin-left: 0px !important;
+        padding: 30px !important;
+     }
+
+     .left2{
+        width: 97% !important;
+        padding: 20px !important;
+      }
+
+     .left2 p {
+        padding: 20 30px 0 0 !important;
+    }
+    .right2{
+        /* width: 85% !important; */
+        display: none;
+    }
+
+    .getInTouch {
+        margin: 5% 0 5% 0;
+    }
+
+   }
