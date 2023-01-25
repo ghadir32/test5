@@ -114,7 +114,7 @@ nav.sticky{
     
     .container1{
         flex-direction: column;
-        width: 100%;
+        width: 95% !important;
         padding-top: 2%;
      }
      .left1{
@@ -123,15 +123,15 @@ nav.sticky{
         max-height: 400px !important;
      }
      .right1{
-        width: 85% !important;
+        width: 97% !important;
         margin: 0;
         margin-top: -100px !important;
         margin-left: 0px !important;
-        padding: 30px;
+        padding: 30px !important;
      }
 
      .left2{
-        width:100%;
+        width: 97% !important;
         padding: 20px !important;
       }
 
