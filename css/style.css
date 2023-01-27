@@ -162,6 +162,12 @@ nav.sticky{
     /* max-height: calc(100vh - 133px) !important; */
  }
 
+    
+ .welcomeDiv{
+    
+    background-attachment:scroll;
+  }
+
 .welcomeSection{
     padding-top: 20px;
 }
@@ -476,8 +482,8 @@ h1{
 
     
  .welcomeDiv{
-    height: 40vh;
-    background-attachment:scroll !important;
+    
+    background-attachment:initial;
   }
 
     #b4Nav{
