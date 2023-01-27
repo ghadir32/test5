@@ -163,10 +163,7 @@ nav.sticky{
  }
 
     
- .welcomeDiv{
-    
-    background-attachment:scroll;
-  }
+
 
 .welcomeSection{
     padding-top: 20px;
@@ -480,11 +477,7 @@ h1{
 
 @media  screen and (max-width: 991px) {
 
-    
- .welcomeDiv{
-    
-    background-attachment:initial;
-  }
+
 
     #b4Nav{
         display:none;
