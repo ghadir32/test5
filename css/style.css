@@ -477,7 +477,7 @@ h1{
     
  .welcomeDiv{
     height: 40vh;
-    background-attachment:scroll;
+    background-attachment:scroll !important;
   }
 
     #b4Nav{
