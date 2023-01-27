@@ -146,6 +146,7 @@ nav.sticky{
     background-color: grey;
      
     padding: 0;
+    
     background-image: url("../images/sky.jpg");
     opacity: 0.9;
     background-repeat: no-repeat;
@@ -474,14 +475,10 @@ h1{
 @media  screen and (max-width: 991px) {
 
     
-
-/* welcome section style */
-.welcomeDiv{
-    
-    background-attachment: scroll;
-  
- }
-
+ .welcomeDiv{
+    height: 40vh;
+    background-attachment:scroll;
+  }
 
     #b4Nav{
         display:none;
