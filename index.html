@@ -54,7 +54,7 @@
                                     <span></span>
 
                                 </div>
-                                <div class="menu"  ng-class="{'menu-class':val}">
+                                <div class="menu"   ng-class="{'menu-class':val}">
                                     <ul>
                                         <li> <a href="#aboutSection"> About </a> </li>
                                         <li> <a href="#specDiv"> Speciality</a> </li>
@@ -456,7 +456,15 @@
 
     <script type="text/javascript">
 
-        
+// var scrollTimer;
+// $('.scroller').on('scroll',function(e){
+//       clearTimeout(scrollTimer);
+//       scrollTimer = setTimeout(() => {
+//         this.scrollTop = Math.max(1, Math.min(this.scrollTop, this.scrollHeight - this.clientHeight - 1));
+//       }, 300);
+// });
+
+
         let $root = $('html, body');
         $('a[href^="#"]').click(function() {
             let href = $.attr(this, 'href');

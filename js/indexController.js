@@ -12,5 +12,7 @@ portfolio.controller('homeController', ['$scope', function($scope){
  
 
     }
+
+  
      
 }]);
