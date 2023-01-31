@@ -54,7 +54,7 @@
                                     <span></span>
 
                                 </div>
-                                <div class="menu"   ng-class="{'menu-class':val}">
+                                <div class="menu"  id="sidebar" ng-class="{'menu-class':val}">
                                     <ul>
                                         <li> <a class="scrollLink" href="#aboutSection"> About </a> </li>
                                         <li> <a class="scrollLink" href="#specDiv"> Speciality</a> </li>
@@ -466,9 +466,24 @@
                 }, 500);
             });
         });
+        
+
+        ////close side nav bar on clicking
+      
 
 
+     $('#sidebar  li a').on('click', function() {
+      // document.getElementsByClassName('menu-class')[0].remove(); 
+      // document.getElementById("sidebar").style.right = "-280px";
+      document.getElementsByClassName('menu-icon')[0].classList.remove('menu-icon-cross');
+      document.getElementById("sidebar").classList.remove("menu-class");
 
+ 
+             // alert("hi");
+
+   
+    })
+ 
 
         // let $root = $('html, body');
         // $('a[href^="#"]').click(function() {
