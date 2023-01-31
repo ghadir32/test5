@@ -56,12 +56,12 @@
                                 </div>
                                 <div class="menu"   ng-class="{'menu-class':val}">
                                     <ul>
-                                        <li> <a href="#aboutSection"> About </a> </li>
-                                        <li> <a href="#specDiv"> Speciality</a> </li>
-                                        <li> <a href="#services"> Services</a> </li>
-                                        <li><a href="#edu"> Achievments</a></li>
-                                        <li><a href="#edu">Education</a></li>
-                                        <li><a target="_blank" href="https://api.whatsapp.com/send?phone=96103923417&text=Hi%20we%20need%20help%20regarding%20something" >Schedule Appointment</a></li>
+                                        <li> <a class="scrollLink" href="#aboutSection"> About </a> </li>
+                                        <li> <a class="scrollLink" href="#specDiv"> Speciality</a> </li>
+                                        <li> <a class="scrollLink" href="#services"> Services</a> </li>
+                                        <li><a class="scrollLink" href="#edu"> Achievments</a></li>
+                                        <li><a class="scrollLink" href="#edu">Education</a></li>
+                                        <li><a class="scrollLink" target="_blank" href="https://api.whatsapp.com/send?phone=96103923417&text=Hi%20we%20need%20help%20regarding%20something" >Schedule Appointment</a></li>
 
                                     </ul>
                                 </div>
@@ -456,25 +456,30 @@
 
     <script type="text/javascript">
 
-// var scrollTimer;
-// $('.scroller').on('scroll',function(e){
-//       clearTimeout(scrollTimer);
-//       scrollTimer = setTimeout(() => {
-//         this.scrollTop = Math.max(1, Math.min(this.scrollTop, this.scrollHeight - this.clientHeight - 1));
-//       }, 300);
-// });
+        // Smooth Scrolling  
 
-
-        let $root = $('html, body');
-        $('a[href^="#"]').click(function() {
-            let href = $.attr(this, 'href');
-            $root.animate({
-              scrollTop: $(href).offset().top
-            }, 500, function() {
-              window.location.hash = href;
+        $(document).ready(function() {
+          $("a.scrollLink").click(function(event) {
+              event.preventDefault();
+              $("html, body").animate({
+                  scrollTop: $($(this).attr("href")).offset().top
+                }, 500);
             });
-            return false;
-          });
+        });
+
+
+
+
+        // let $root = $('html, body');
+        // $('a[href^="#"]').click(function() {
+        //     let href = $.attr(this, 'href');
+        //     $root.animate({
+        //       scrollTop: $(href).offset().top
+        //     }, 500, function() {
+        //       window.location.hash = href;
+        //     });
+        //     return false;
+        //   });
 
 
           // Get the button
