@@ -78,8 +78,6 @@
     </header>
 
 
-
-    <!-- <div class="toparrowDiv" id="upDiv"> <a> <i class="far fa-long-arrow-up"></i></a> </div> -->
     
 <button  class="TopArrow" id="upDiv" title="Go to top"><i class="fas fa-angle-double-up"></i> </button>
 
@@ -113,7 +111,7 @@
                <p>I have over 10 years of experience guiding clients through the challenging parts of life.
                  Whether it’s the loss of a loved one,  difficult health diagnosis, addiction, sexual orientation,  or moving forward after trauma... we can work together to find the way forward.</p>
                 </div>
-                <button class="btn btn-light  learnMoreBtn"><a style="color:black" href="#specDiv"> More about Dr Mohammad</a></button>
+                <button class="btn btn-light  learnMoreBtn"><a style="color:black" class="scrollLink" href="#specDiv"> More about Dr Mohammad</a></button>
             </div>
 
         </div>
@@ -149,7 +147,7 @@
         </div>
    </div>
 
-    <div class="specDiv"></div>
+    <div id="specDivv"></div>
 
 
    <!-- beginning of life fixing section -->
@@ -479,24 +477,12 @@
       // document.getElementById("sidebar").style.right = "-280px";
       document.getElementsByClassName('menu-icon')[0].classList.remove('menu-icon-cross');
       document.getElementById("sidebar").classList.remove("menu-class");
-    
-   
     })
  
 
-        // let $root = $('html, body');
-        // $('a[href^="#"]').click(function() {
-        //     let href = $.attr(this, 'href');
-        //     $root.animate({
-        //       scrollTop: $(href).offset().top
-        //     }, 500, function() {
-        //       window.location.hash = href;
-        //     });
-        //     return false;
-        //   });
+    
 
-
-          // Get the button
+          // Get the up arrow button
         let mybutton = document.getElementById("upDiv");
 
         // When the user scrolls down 20px from the top of the document, show the button
@@ -511,8 +497,10 @@
         }
 
         mybutton.addEventListener('click', function(){
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
+          window.scrollTo({top: 0, behavior: 'smooth'});
+
+                // document.body.scrollTop = 0;
+                // document.documentElement.scrollTop = 0;
         })
       
 
