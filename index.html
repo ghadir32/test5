@@ -22,7 +22,10 @@
     </head>
 
 
+
 <body ng-controller="homeController">
+
+  <input type="hidden" value="">
 
     <audio muted="muted" id="tah_audio" src="slow-motion-121841.mp3" loop="loop"></audio>
 
@@ -48,7 +51,7 @@
                             </div>
 
                             <div class="col-md-9 col-sm-9 col-9 text-end">
-                                <div class="menu-icon" ng-click="val = enable()" ng-class="{'menu-icon-cross':val}">
+                                <div class="menu-icon" ng-click="val = enable()"  ng-class="{'menu-icon-cross':val}">
                                     <span></span>
                                     <span></span>
                                     <span></span>
@@ -61,7 +64,7 @@
                                         <li> <a class="scrollLink" href="#services"> Services</a> </li>
                                         <li><a class="scrollLink" href="#edu">Education & Achievments</a></li>
                                         <!-- <li><a class="scrollLink" href="#edu">Education</a></li> -->
-                                        <li><a target="_blank" href="https://api.whatsapp.com/send?phone=96103923417&text=Hi%20Dr!" >Schedule Appointment</a></li>
+                                        <li><a target="_blank" href="https://api.whatsapp.com/send?phone=96103923417&text=Hello%20Dr!" >Schedule Appointment</a></li>
 
                                     </ul>
                                 </div>
@@ -110,7 +113,7 @@
                <p>I have over 10 years of experience guiding clients through the challenging parts of life.
                  Whether it’s the loss of a loved one,  difficult health diagnosis, addiction, sexual orientation,  or moving forward after trauma... we can work together to find the way forward.</p>
                 </div>
-                <button class="btn btn-light learnMoreBtn"><a style="color:black" href="#specDiv"> More about Dr Mohammad</a></button>
+                <button class="btn btn-light  learnMoreBtn"><a style="color:black" href="#specDiv"> More about Dr Mohammad</a></button>
             </div>
 
         </div>
@@ -124,9 +127,8 @@
         <div class="left2">
             <div class="txtContent">
                 <h1>Life Can be Challenging Sometimes.</h1>
-                <p>Challenges in life are a given, and they can be used to your advantage. Each one is an opportunity for personal growth and self-improvement.
-                 <br>The emotions that one could experience when dealing with a challenging issue may include; <span style="font-weight:bold">sadness, anger, loneliness, resentment, anxiety, stress, fear or even depression.</span> <br>
-                     And I’m happy to meet you exactly where you are - because you and I will work together. We’re a team..</p>
+                <p> Every challenge presents a chance for improvement and personal growth. When confronted with a difficult situation,<br> one may feel<span style="font-weight:bold"> sadness, rage, loneliness, resentment, anxiety, stress, fear, or even depression.</span> And since we'll be collaborating, <i>I'm delighted to meet you right where you are</i>  
+                     - because you and I will work together. We’re a team...</p>
             </div>
         </div>
 
@@ -151,7 +153,7 @@
 
 
    <!-- beginning of life fixing section -->
-   <section class="FixLife container-fluid" id="specDiv">
+   <section class="FixLife container-fluid"  id="specDiv">
     <h3 class="h3">It's important that you get the right support, I’m here to help you navigate life’s challenges, and get the life you deserve.</h3> 
     <br>
     <!-- <h3 class="h3">I also educate organizations and therapists on these topics.</h3> -->
@@ -160,16 +162,15 @@
 
                 <p class="spec"> I specialize in mental and neurological illnesses, a psychoanalyst, psychotherapist, dealing with personal disorders and family orientation.</p>
 
-                <p> My goal is to help you feel more connected to yourself and others, and empowered to seek out the life you want.</p>
+                <p>My objective is to give you the confidence to pursue the life you want and to feel more connected to others and yourself.</p>
 
-                 <p> Ultimately, you will be the one to decide on your own best path. I aim to provide you with a  <strong>safe, respectful, 
-                            compassionate, encouraging, and non-judgmental</strong> environment where you can explore your options..</p>
+                   <p> Ultimately, you will be the one to decide on your own best path. I aim to provide you with a  <strong>safe, respectful, 
+                      compassionate, encouraging, and non-judgmental</strong> environment where you can explore your options..</p>
+
 
                  <p> As your therapist, I serve as your facilitator. I strive to create an upbeat, supportive environment where you can learn and discover more about yourself, your patterns, and your own deeply-held values.
 
-                    You’ll have the time and space to freely explore the challenges you’re facing. 
-                    And we’ll work collaboratively to build the coping skills and healthy boundaries you need to get unstuck from the thoughts and behaviors holding you back..</p>
-
+                  You'll have the time and room to explore your problems at <i>your own pace.</i> And together, we'll work to develop the coping mechanisms and sound personal boundaries you require to overcome the ideas and actions that are holding you back.</p>
         </div>
 
         <div class="imgDiv" > <img class="cactusImg"  src="./images/wallhaven-cactus.jpg"> </div>
@@ -193,7 +194,7 @@
 
                 <div class="serviceText">
 
-                    <p class="spec"> I'm a clinical psychologist, that works with the following Therapeutic Techniques:</p>
+                    <p class="spec">I practice clinical psychology and use the following therapeutici Techniques:</p>
                         <ul>
                             <li> Analytical Therapy </li>
                             <li>  CBT (Cognitive Behavioral Therapy) </li>
@@ -470,6 +471,7 @@
 
         ////close side nav bar on clicking
       
+      
 
 
      $('#sidebar  li a').on('click', function() {
@@ -477,10 +479,7 @@
       // document.getElementById("sidebar").style.right = "-280px";
       document.getElementsByClassName('menu-icon')[0].classList.remove('menu-icon-cross');
       document.getElementById("sidebar").classList.remove("menu-class");
-
- 
-             // alert("hi");
-
+    
    
     })
  
