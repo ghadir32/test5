@@ -8,9 +8,9 @@
         <script src="./js/angular-1.8.2.js"></script>
         <script src="./js/angular-resourse-1.8.2.js"></script>
         <script src="./js/angular-route-1.8.2.js"></script>  
-        <script src="./js/index.js"> </script>
+        <!-- <script src="./js/index.js"> </script> -->
         <script src="./js/jquery-3.6.0.js"> </script>
-        <script src="./js/indexController.js"> </script>
+        <!-- <script src="./js/indexController.js"> </script> -->
  
         <link rel="stylesheet" href="./css/bootstrap-5.2.3.css">
         <link rel="stylesheet" href="./css/style.css">
@@ -27,7 +27,8 @@
 
   <input type="hidden" value="">
 
-    <audio muted="muted" id="tah_audio" src="slow-motion-121841.mp3" loop="loop"></audio>
+   
+    <!-- <audio  id="tah_audio" src="piano-poem-60-SBA-300239571-preview-[AudioTrimmer.com].mp3" loop="loop"></audio> -->
 
     <div class="content">
 
@@ -59,12 +60,12 @@
                                 </div>
                                 <div class="menu"  id="sidebar" ng-class="{'menu-class':val}">
                                     <ul>
-                                        <li> <a class="scrollLink" href="#aboutSection"> About </a> </li>
-                                        <li> <a class="scrollLink" href="#specDiv"> Speciality</a> </li>
-                                        <li> <a class="scrollLink" href="#services"> Services</a> </li>
-                                        <li><a class="scrollLink" href="#edu">Education & Achievments</a></li>
+                                        <li> <a class="scrollLink" ng-click="val = enable()" ng-class="{'menu-class':val}" href="#aboutSection"> About </a> </li>
+                                        <li> <a class="scrollLink" ng-click="val = enable()" ng-class="{'menu-class':val}" href="#specDiv"> Speciality</a> </li>
+                                        <li> <a class="scrollLink" ng-click="val = enable()" ng-class="{'menu-class':val}" href="#services"> Services</a> </li>
+                                        <li><a class="scrollLink" ng-click="val = enable()" ng-class="{'menu-class':val}" href="#edu">Education & Achievments</a></li>
                                         <!-- <li><a class="scrollLink" href="#edu">Education</a></li> -->
-                                        <li><a target="_blank" href="https://api.whatsapp.com/send?phone=96103923417&text=Hello%20Dr!" >Schedule Appointment</a></li>
+                                        <li><a target="_blank" ng-click="val = enable()" ng-class="{'menu-class':val}" href="https://api.whatsapp.com/send?phone=96103923417&text=Hello%20Dr!" >Schedule Appointment</a></li>
 
                                     </ul>
                                 </div>
@@ -455,8 +456,34 @@
 
     <script type="text/javascript">
 
-        // Smooth Scrolling  
+var portfolio = angular.module('Portfolio', ['ngRoute', 'ngResource']);
 
+    
+      portfolio.controller('homeController', ['$scope', function($scope){
+
+
+      $scope.val = false;
+
+      //to close menu if open and open if closed
+      $scope.enable = function(){
+
+          
+        if( $scope.val == false){
+
+            $scope.val = true;
+            return true;
+        }else{
+
+            $scope.val = false;
+            return false;
+        }
+
+      }
+     
+
+      }]);
+ 
+        // Smooth Scrolling  
         $(document).ready(function() {
           $("a.scrollLink").click(function(event) {
               event.preventDefault();
@@ -465,22 +492,7 @@
                 }, 500);
             });
         });
-        
-
-        ////close side nav bar on clicking
-      
-      
-
-
-     $('#sidebar  li a').on('click', function() {
-      // document.getElementsByClassName('menu-class')[0].remove(); 
-      // document.getElementById("sidebar").style.right = "-280px";
-      document.getElementsByClassName('menu-icon')[0].classList.remove('menu-icon-cross');
-      document.getElementById("sidebar").classList.remove("menu-class");
-    })
  
-
-    
 
           // Get the up arrow button
         let mybutton = document.getElementById("upDiv");
@@ -507,7 +519,10 @@
         window.addEventListener("scroll", function(){
             var header = document.querySelector("nav");
             header.classList.toggle("sticky", window.scrollY > 0)
-        })
+        });
+
+       
+
     </script>
 </body>
 
